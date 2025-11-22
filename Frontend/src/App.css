@@ -1,0 +1,90 @@
+.container {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 25px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #333;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus, select:focus {
+  border-color: #4a90e2;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #357ac4;
+}
+
+.result-card {
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 14px;
+  background: #e5f7e5;
+  text-align: center;
+  animation: pop 0.5s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2d8a2d;
+}
