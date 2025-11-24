@@ -5,3 +5,12 @@ Backend/venv/
 
 __pycache__/
 *.pkl
+
+
+
+*.pyc
+*.log
+.env
+.DS_Store
+.cache/
+.ipynb_checkpoints/
