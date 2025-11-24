@@ -64,27 +64,6 @@ export default function App() {
 
 
 
-  // const handlePredict = async () => {
-  //   try {
-  //     const res = await fetch("http://127.0.0.1:5000/predict", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(form)
-  //     });
-
-  //     const data = await res.json();
-
-  //     if (data.predicted_price) {
-  //       setPrice(Math.round(data.predicted_price));
-  //     } else {
-  //       alert("Error: " + JSON.stringify(data));
-  //     }
-
-  //   } catch (err) {
-  //     console.error(err);
-  //     alert("Something went wrong!");
-  //   }
-  // };
 
   return (
     <div className="container">
@@ -97,10 +76,13 @@ export default function App() {
           <label>Company</label>
           <select name="Company" onChange={handleChange}>
             <option value="">Select Company</option>
-            <option>Dell</option><option>HP</option>
-            <option>Lenovo</option><option>MSI</option>
-            <option>Acer</option><option>Asus</option>
-            <option>Apple</option>
+              <option>Dell</option>
+              <option>HP</option>
+              <option>Lenovo</option>
+              <option>MSI</option>
+              <option>Acer</option>
+              <option>Asus</option>
+              <option>Apple</option>
           </select>
         </div>
 
@@ -122,8 +104,13 @@ export default function App() {
           <label>RAM (GB)</label>
           <select name="Ram" onChange={handleChange}>
             <option value="">Select RAM</option>
-            <option>4</option><option>8</option>
-            <option>16</option><option>32</option>
+            <option>4</option>
+            <option>8</option>
+            <option>12</option>
+            <option>16</option>
+            <option>24</option>
+            <option>32</option>
+            <option>64</option>
           </select>
         </div>
 
@@ -217,7 +204,7 @@ export default function App() {
           <select name="OS" onChange={handleChange}>
             <option value="">Select OS</option>
             <option>Windows</option>
-            <option>MacOS</option>
+            <option>macOS</option>
             <option>Linux</option>
             <option>No OS</option>
           </select>
