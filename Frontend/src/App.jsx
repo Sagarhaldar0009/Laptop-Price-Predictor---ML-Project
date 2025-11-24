@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import api from "./api/api";
 
 export default function App() {
   const [form, setForm] = useState({
@@ -42,18 +43,12 @@ export default function App() {
     };
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/predict", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
+      const res = await api.post("/predict", payload);
 
-      const data = await res.json();
-
-      if (data.predicted_price) {
-        setPrice(Math.round(data.predicted_price));
+      if (res.data.predicted_price) {
+        setPrice(Math.round(res.data.predicted_price));
       } else {
-        alert("Error: " + JSON.stringify(data));
+        alert("Error: " + JSON.stringify(res.data));
       }
 
     } catch (err) {
